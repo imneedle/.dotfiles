@@ -55,8 +55,6 @@ set hidden              "hide files in background instead of closing them
 set nowrap              "disable line wrapping
 set nofoldenable        "disable code folding
 set autoread            "automatically re-read files in unchanged
-set formatoptions+=tcqj "delete comment characters when joining lines
-set formatoptions-=cro  "disable auto comment on new line
 set ttimeoutlen=50      "wait 50ms for keys
 set ttyfast             "faster redrawing
 set lazyredraw          "only redraw when necessary
