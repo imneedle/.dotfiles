@@ -11,10 +11,10 @@ if [[ -z $selected ]]; then
 fi
 
 selected_name=$(basename "$selected" | tr . _)
-tmux_running=$(pgrep tmux)
+tmux_running=$(pgrep -f tmux)
 
 # If we are not currently running tmux, we don't detach the session
-if [[ -z $TMUX ]] && [[ -z $tmux_running ]]; then
+if [[ -z $tmux_running ]]; then
     tmux new-session -s $selected_name -c $selected
     exit 0
 fi
