@@ -19,6 +19,9 @@ setopt SHARE_HISTORY       # prallel sessions use the same history
 setopt HIST_SAVE_NO_DUPS   # don't save duplicates in hist file
 setopt HIST_REDUCE_BLANKS  # don't store blank lines in hist file
 
+# FZF keybinds and auto-complete
+[[ -f $XDG_CONFIG_HOME/fzf/fzf.zsh ]] && source "$XDG_CONFIG_HOME/fzf/fzf.zsh"
+
 # Pure prompt
 fpath+=("$ZDOTDIR/plugins/pure")
 autoload -U promptinit; promptinit
