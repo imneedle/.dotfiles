@@ -1,8 +1,14 @@
 return {
     "numToStr/Comment.nvim",
-    lazy = false,
+    lazy = true,
+    keys = {
+        { "gc", mode = "n" },
+        { "gc", mode = "v" },
+        { "gb", mode = "n" },
+        { "gb", mode = "v" },
+    },
     config = function()
-        require "Comment".setup {
+        require("Comment").setup({
             ---Add a space b/w comment and the line
             ---@type boolean
             padding = true,
@@ -21,7 +27,7 @@ return {
                 ---Line-comment toggle keymap
                 line = "gcc",
                 ---Block-comment toggle keymap
-                block = "gbc"
+                block = "gbc",
             },
             ---LHS of operator-pending mappings in NORMAL + VISUAL mode
             ---@type table
@@ -29,7 +35,7 @@ return {
                 ---Line-comment keymap
                 line = "gc",
                 ---Block-comment keymap
-                block = "gb"
+                block = "gb",
             },
             ---LHS of extra mappings
             ---@type table
@@ -39,7 +45,7 @@ return {
                 ---Add comment on the line below
                 below = "gco",
                 ---Add comment at the end of line
-                eol = "gcA"
+                eol = "gcA",
             },
             ---Create basic (operator-pending) and extended mappings for NORMAL + VISUAL mode
             ---@type table
@@ -53,14 +59,14 @@ return {
                 extra = true,
                 ---Extended mapping
                 ---Includes `g>`, `g<`, `g>[count]{motion}` and `g<[count]{motion}`
-                extended = false
+                extended = false,
             },
             ---Pre-hook, called before commenting the line
             ---@type fun(ctx: Ctx):string
             pre_hook = nil,
             ---Post-hook, called after commenting is done
             ---@type fun(ctx: Ctx)
-            post_hook = nil
-        }
+            post_hook = nil,
+        })
     end,
 }

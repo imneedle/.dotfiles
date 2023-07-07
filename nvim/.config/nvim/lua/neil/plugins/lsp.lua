@@ -1,10 +1,11 @@
 return {
     "neovim/nvim-lspconfig",
-    lazy = false,
+    lazy = true,
     dependencies = {
-        require "neil.plugins.lsp.mason",
-	require "neil.plugins.lsp.cmp",
+        'williamboman/mason.nvim',
+        'williamboman/mason-lspconfig.nvim',
     },
+    event = { "BufReadPost", "BufNewFile" },
     config = function()
         -- Global mappings.
         -- See `:help vim.diagnostic.*` for documentation on any of the below functions
@@ -38,9 +39,6 @@ return {
             vim.keymap.set('n', '<leader>rn', vim.lsp.buf.rename, opts)
             vim.keymap.set({ 'n', 'v' }, '<leader>ca', vim.lsp.buf.code_action, opts)
             vim.keymap.set('n', 'gr', vim.lsp.buf.references, opts)
-            -- vim.keymap.set('n', '<leader>f', function()
-            --   vim.lsp.buf.format { async = true }
-            -- end, opts)
           end,
         })
     end,
