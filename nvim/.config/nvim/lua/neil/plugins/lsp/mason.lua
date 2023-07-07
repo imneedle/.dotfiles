@@ -42,7 +42,7 @@ return {
     config = function()
         require "mason".setup {
             -- The directory in which to install packages.
-            install_root_dir = vim.fn.stdpath "data" .. "mason" ,
+            install_root_dir = vim.fn.stdpath "data" .. "/mason" ,
 
             ui = {
                 icons = {

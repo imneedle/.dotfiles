@@ -91,10 +91,7 @@ return {
 
         -- Set up lspconfig.
         local capabilities = require('cmp_nvim_lsp').default_capabilities()
-        local servers = {
-            "clangd",
-            "lua_ls",
-        }
+	local servers = require "neil.plugins.lsp.servers"
 
         for _, lsp in ipairs(servers) do
             require("lspconfig")[lsp].setup {capabilities = capabilities}

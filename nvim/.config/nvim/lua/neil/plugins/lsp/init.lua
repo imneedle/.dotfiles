@@ -1,6 +1,6 @@
 return {
     "neovim/nvim-lspconfig",
-    lazy = true,
+    lazy = false,
     dependencies = {
         require "neil.plugins.lsp.mason",
 	require "neil.plugins.lsp.cmp",

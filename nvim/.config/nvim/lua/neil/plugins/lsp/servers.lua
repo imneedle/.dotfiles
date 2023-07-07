@@ -1,5 +1,22 @@
 -- List of "ensure_installed" LSP servers
 return {
+    "bashls",
     "clangd",
+    "cmake",
+    "cssls",
+    "dockerls",
+    "emmet_ls",
+    "eslint",
+    "hls",
+    "html",
+    "jdtls",
+    "jsonls",
     "lua_ls",
+    "pylsp",
+    "r_language_server",
+    "rust_analyzer",
+    "sqlls",
+    "tsserver",
+    "texlab",
+    "vimls",
 }
