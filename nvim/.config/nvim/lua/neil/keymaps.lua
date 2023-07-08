@@ -1,7 +1,7 @@
 local opts = { silent = true, nowait = true, remap = false }
 
 -- Leader keys
-vim.g.mapleader      = " "
+vim.g.mapleader = " "
 vim.g.maplocalleader = ","
 
 -- Get rid of this stupid mode
@@ -23,8 +23,8 @@ vim.keymap.set("n", "<leader>tb", ":-tabmove<CR>", opts)
 vim.keymap.set("n", "<leader>tw", ":+tabmove<CR>", opts)
 
 -- Registers
-vim.keymap.set({"n", "v"}, "<leader>d", [["_d]], opts)
-vim.keymap.set({"n", "v"}, "<leader>y", [["+y]], opts)
+vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]], opts)
+vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]], opts)
 vim.keymap.set("n", "<leader>Y", [["+Y]], opts)
 vim.keymap.set("x", "<leader>p", [["_dP]], opts)
 

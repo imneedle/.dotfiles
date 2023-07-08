@@ -1,6 +1,6 @@
 -- Highlight on yank
 local highlightYankGroup = vim.api.nvim_create_augroup("HighlightYank", {
-    clear = true
+    clear = true,
 })
 vim.api.nvim_create_autocmd("TextYankPost", {
     command = "silent! lua vim.highlight.on_yank()",
@@ -8,10 +8,8 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 })
 
 -- Better comments with format options
-local betterFormatOptionsGroup = vim.api.nvim_create_augroup(
-    "BetterFormatOptions",
-    { clear = true }
-)
+local betterFormatOptionsGroup =
+    vim.api.nvim_create_augroup("BetterFormatOptions", { clear = true })
 -- Disable auto comment wrapping when line exceeds 80 chars
 vim.api.nvim_create_autocmd("FileType", {
     command = "silent! set formatoptions-=c",
