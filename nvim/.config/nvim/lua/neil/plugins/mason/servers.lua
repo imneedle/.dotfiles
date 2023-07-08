@@ -13,7 +13,7 @@ return {
     "jsonls",
     "lua_ls",
     "pylsp",
-    "r_language_server",
+    -- "r_language_server", deactivate for now, we don't have R installed
     "rust_analyzer",
     "sqlls",
     "tsserver",
