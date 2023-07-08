@@ -12,14 +12,10 @@ return {
         { "L3MON4D3/LuaSnip" },
     },
     event = { "BufReadPost", "BufNewFile" },
-    init = function()
-        vim.opt.completeopt = { "menu", "menuone", "noselect" }
-    end,
-    config = function()
+    opts = function()
         -- Set up nvim-cmp.
         local cmp = require("cmp")
-
-        cmp.setup({
+        return {
             experimental = {
                 ghost_text = true,
                 native_menu = false,
@@ -65,7 +61,11 @@ return {
                 { name = "async_path" },
                 { name = "nvim_lua" },
             }),
-        })
+        }
+    end,
+    config = function(_, opts)
+        local cmp = require("cmp")
+        cmp.setup(opts)
 
         -- Use buffer source for `/` and `?` (if you enabled `native_menu`, this won't work anymore).
         cmp.setup.cmdline({ "/", "?" }, {
@@ -88,9 +88,10 @@ return {
         -- Set up lspconfig.
         local capabilities = require("cmp_nvim_lsp").default_capabilities()
         local servers = require("neil.plugins.mason.servers")
-
         for _, lsp in ipairs(servers) do
             require("lspconfig")[lsp].setup({ capabilities = capabilities })
         end
+
+        -- Configuration
     end,
 }

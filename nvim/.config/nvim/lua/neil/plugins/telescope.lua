@@ -1,7 +1,8 @@
 return {
     "nvim-telescope/telescope.nvim",
-    lazy = true,
     dependencies = { "nvim-lua/plenary.nvim" },
+    lazy = true,
+    cmd = "Telescope",
     keys = {
         {
             "<leader>pf",
@@ -28,9 +29,9 @@ return {
             ":lua require('telescope.builtin').registers()<CR>",
         },
     },
-    config = function()
+    opts = function()
         local actions = require("telescope.actions")
-        require("telescope").setup({
+        return {
             defaults = {
                 sorting_strategy = "ascending",
                 layout_strategy = "horizontal",
@@ -45,11 +46,10 @@ return {
                 mappings = {
                     i = {
                         ["<Tab>"] = actions.select_tab, -- open in a new tab
-                        ["<S-Tab>"] = actions.select_tab, -- open in a new tab
                         ["<Esc>"] = actions.close, -- quit
                     },
                 },
             },
-        })
+        }
     end,
 }
