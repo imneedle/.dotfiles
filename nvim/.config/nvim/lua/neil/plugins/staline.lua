@@ -41,9 +41,8 @@ return {
                 "left_sep_double",
                 " ",
                 "branch",
-                "right_sep_double",
+                " ",
                 "-file_name",
-                "left_sep_double",
             },
             mid = { "lsp" },
             right = {
