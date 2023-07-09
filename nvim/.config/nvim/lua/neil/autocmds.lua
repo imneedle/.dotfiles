@@ -1,10 +1,7 @@
--- Highlight on yank
-local highlightYankGroup = vim.api.nvim_create_augroup("HighlightYank", {
-    clear = true,
-})
-vim.api.nvim_create_autocmd("TextYankPost", {
+-- highlight on yank
+vim.api.nvim_create_autocmd({ "TextYankPost" }, {
     command = "silent! lua vim.highlight.on_yank()",
-    group = highlightYankGroup,
+    group = vim.api.nvim_create_augroup("HighlightYank", { clear = true }),
 })
 
 -- Better comments with format options
