@@ -73,10 +73,10 @@ return {
             enable = true, -- false will disable the whole extension
             disable = {}, -- list of languages that will be disabled
             keymaps = {
-                init_selection = "gnn",
-                node_incremental = "grn",
-                scope_incremental = "grc",
-                node_decremental = "grm",
+                init_selection = "gn",
+                node_incremental = "+",
+                scope_incremental = "_",
+                node_decremental = "-",
             },
         },
         textobjects = {
