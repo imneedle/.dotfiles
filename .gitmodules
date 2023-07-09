@@ -4,6 +4,7 @@
 [submodule "zsh/.config/zsh/plugins/zsh-autosuggestions"]
 	path = zsh/.config/zsh/plugins/zsh-autosuggestions
 	url = https://github.com/zsh-users/zsh-autosuggestions
-[submodule "tmux/.config/tmux/plugins/tmux-onehalf-theme"]
-	path = tmux/.config/tmux/plugins/tmux-onehalf-theme
-	url = https://github.com/andersondanilo/tmux-onehalf-theme.git
+[submodule "tmux/.config/tmux/themes/tmux-nord"]
+	path = tmux/.config/tmux/themes/tmux-nord
+	url = git@github.com:nordtheme/tmux.git
+	ignore = dirty
