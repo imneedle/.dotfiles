@@ -15,3 +15,5 @@
 	plog=log --color --graph --date=format:'%Y-%m-%d %H:%M:%S' --pretty=format:'%Cred%h%Creset %s %Cgreen(%ad) %C(bold blue)<%an>%Creset%C(yellow)%d%Creset'
 	pbranch=branch --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(contents:subject) %(color:green)(%(committerdate:relative)) [%(authorname)]' --sort=-committerdate
 
+[init]
+	defaultBranch = main
