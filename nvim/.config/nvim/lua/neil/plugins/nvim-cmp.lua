@@ -20,6 +20,10 @@ return {
                 ghost_text = true,
                 native_menu = false,
             },
+            preselect = cmp.PreselectMode.None,
+            complete = {
+                completeopt = "menu,menuone,noinsert,noselect",
+            },
             snippet = {
                 -- REQUIRED - you must specify a snippet engine
                 expand = function(args)
@@ -66,6 +70,8 @@ return {
     config = function(_, opts)
         local cmp = require("cmp")
         cmp.setup(opts)
+
+        cmp.mapping.confirm({ select = true })
 
         -- Use buffer source for `/` and `?` (if you enabled `native_menu`, this won't work anymore).
         cmp.setup.cmdline({ "/", "?" }, {
