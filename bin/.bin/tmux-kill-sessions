@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+# Kills all sessions except the current one if inside a tmux session
+if test "$(tmux list-sessions | wc -l)" -gt 1; then
+    tmux list-sessions | grep -v attached | cut -f1 -d':' | xargs -n 1 tmux kill-session -t
+
+# Kills all sessions if not inside a tmux session
+elif test -z "$TMUX"; then
+    tmux list-sessions | cut -f1 -d':' | xargs -n 1 tmux kill-session -t
+
+fi
