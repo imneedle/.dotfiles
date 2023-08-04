@@ -35,6 +35,8 @@ return {
                 -- documentation = cmp.config.window.bordered(),
             },
             mapping = cmp.mapping.preset.insert({
+                ["<Up>"] = cmp.mapping.scroll_docs(-4),
+                ["<Down>"] = cmp.mapping.scroll_docs(4),
                 ["<C-Space>"] = cmp.mapping(function(fallback)
                     if require("luasnip").expandable() then
                         require("luasnip").expand()
