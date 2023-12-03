@@ -1,2 +1,2 @@
 # Key bindings
-source "/opt/homebrew/Cellar/fzf/0.42.0/shell/key-bindings.zsh"
+source "/opt/homebrew/Cellar/fzf/$(fzf --version | cut -d' ' -f1)/shell/key-bindings.zsh"
