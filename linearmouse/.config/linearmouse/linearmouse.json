@@ -1,6 +1,20 @@
 {
   "schemes" : [
-
+    {
+      "if" : {
+        "device" : {
+          "vendorID" : "0x413c",
+          "productID" : "0x301a",
+          "category" : "mouse",
+          "productName" : "Dell MS116 USB Optical Mouse"
+        }
+      },
+      "scrolling" : {
+        "reverse" : {
+          "vertical" : true
+        }
+      }
+    }
   ],
   "$schema" : "https:\/\/schema.linearmouse.app\/0.9.5"
 }
