@@ -20,7 +20,6 @@
                     {
                         "manipulators": [
                             {
-                                "description": "MacOS default keyboard: RIGHT ARROW -> CONTROL",
                                 "conditions": [
                                     {
                                         "identifiers": [
@@ -32,6 +31,7 @@
                                         "type": "device_if"
                                     }
                                 ],
+                                "description": "MacOS default keyboard: RIGHT ARROW -> CONTROL",
                                 "from": {
                                     "key_code": "right_arrow"
                                 },
@@ -47,7 +47,6 @@
                     {
                         "manipulators": [
                             {
-                                "description": "MacOS default keyboard: LEFT CONTROL + RIGHT ARROW -> RIGHT ARROW",
                                 "conditions": [
                                     {
                                         "identifiers": [
@@ -59,6 +58,7 @@
                                         "type": "device_if"
                                     }
                                 ],
+                                "description": "MacOS default keyboard: LEFT CONTROL + RIGHT ARROW -> RIGHT ARROW",
                                 "from": {
                                     "key_code": "right_arrow",
                                     "modifiers": {
@@ -79,7 +79,6 @@
                     {
                         "manipulators": [
                             {
-                                "description": "External keyboard: OPTION + TAB -> COMMAND + TAB",
                                 "conditions": [
                                     {
                                         "identifiers": [
@@ -91,6 +90,7 @@
                                         "type": "device_if"
                                     }
                                 ],
+                                "description": "External keyboard: OPTION + TAB -> COMMAND + TAB",
                                 "from": {
                                     "key_code": "tab",
                                     "modifiers": {
