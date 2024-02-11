@@ -4,6 +4,7 @@ return {
     dependencies = { "nvim-treesitter/nvim-treesitter-textobjects" },
     build = ":TSUpdate",
     event = { "BufReadPost", "BufNewFile" },
+    ft = { "netrw" },
     cmd = "TSUpdateSync",
     opts = {
         -- A list of parser names, or "all" (the five listed parsers should always be installed)
