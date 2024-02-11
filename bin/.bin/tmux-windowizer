@@ -9,5 +9,5 @@ if ! tmux has-session -t $target 2>/dev/null; then
     tmux new-window -dn $clean_name
 fi
 
-shift
-tmux send-keys -t $target "$*"
+shift # shifts the command line arguments => $1 -> $2, $2 -> $3, ...
+tmux send-keys -t $target "$*" C-m
