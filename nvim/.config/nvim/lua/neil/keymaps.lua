@@ -27,6 +27,7 @@ vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]], opts)
 vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]], opts)
 vim.keymap.set("n", "<leader>Y", [["+Y]], opts)
 vim.keymap.set("x", "<leader>p", [["_dP]], opts)
+vim.keymap.set("x", "<leader>P", [["_d"+P]], opts)
 
 -- tmux-sessionizer
 vim.keymap.set("n", "<C-f>", ":silent !tmux neww tmux-sessionizer<CR>", opts)
