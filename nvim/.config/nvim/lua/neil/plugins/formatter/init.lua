@@ -26,10 +26,13 @@ return {
                 json = { require("neil.plugins.formatter.formatters.prettier") },
                 html = { require("neil.plugins.formatter.formatters.prettier") },
                 lua = { require("neil.plugins.formatter.formatters.stylua") },
-                markdown = { require("neil.plugins.formatter.formatters.prettier") },
+                markdown = {
+                    require("neil.plugins.formatter.formatters.prettier"),
+                },
                 pug = { require("neil.plugins.formatter.formatters.prettier") },
                 python = {
-                    require("neil.plugins.formatter.formatters.autopep8"),
+                    require("neil.plugins.formatter.formatters.black"),
+                    require("neil.plugins.formatter.formatters.ruff"),
                 },
                 scss = { require("neil.plugins.formatter.formatters.prettier") },
                 sh = { require("neil.plugins.formatter.formatters.shfmt") },
