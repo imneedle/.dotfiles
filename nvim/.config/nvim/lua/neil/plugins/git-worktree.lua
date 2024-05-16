@@ -9,8 +9,16 @@ return {
         require("telescope").load_extension("git_worktree")
     end,
     keys = {
-        { "<leader>gw", ":lua require 'telescope'.extensions.git_worktree.git_worktrees()<CR>" },
-        { "<leader>gW", ":lua require 'telescope'.extensions.git_worktree.create_git_worktree()<CR>" },
+        {
+            "<leader>gw",
+            ":lua require 'telescope'.extensions.git_worktree.git_worktrees()<CR>",
+            silent = true,
+        },
+        {
+            "<leader>gW",
+            ":lua require 'telescope'.extensions.git_worktree.create_git_worktree()<CR>",
+            silent = true,
+        },
         -- { <C-d> inside worktrees view will delete a worktree }
     },
 }

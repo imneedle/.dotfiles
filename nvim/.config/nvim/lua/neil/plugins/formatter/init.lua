@@ -2,7 +2,7 @@ return {
     "mhartington/formatter.nvim",
     lazy = true,
     keys = {
-        { "<leader>f", ":Format<CR>" },
+        { "<leader>f", ":Format<CR>", silent = true },
     },
     config = function()
         require("formatter").setup({

@@ -3,8 +3,8 @@ return {
     lazy = true,
     cmd = "Git",
     keys = {
-        { "gu", ":diffget //2<CR>" },
-        { "gh", ":diffget //3<CR>" },
+        { "gu", ":diffget //2<CR>", silent = true },
+        { "gh", ":diffget //3<CR>", silent = true },
     },
     config = function()
         local fugitive_group =

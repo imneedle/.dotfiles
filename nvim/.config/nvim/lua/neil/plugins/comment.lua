@@ -2,10 +2,10 @@ return {
     "numToStr/Comment.nvim",
     lazy = true,
     keys = {
-        { "gc", mode = "n" },
-        { "gc", mode = "v" },
-        { "gb", mode = "n" },
-        { "gb", mode = "v" },
+        { "gc", mode = "n", silent = true },
+        { "gc", mode = "v", silent = true },
+        { "gb", mode = "n", silent = true },
+        { "gb", mode = "v", silent = true },
     },
     opts = {
         ---Add a space b/w comment and the line
