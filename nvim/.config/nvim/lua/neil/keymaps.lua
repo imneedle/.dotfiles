@@ -15,6 +15,12 @@ vim.keymap.set("n", "N", "Nzz", opts)
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv", opts)
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv", opts)
 
+
+-- Quickfix list
+vim.keymap.set("n", "<C-j>", ":cnext<CR>", opts)
+vim.keymap.set("n", "<C-k>", ":cprev<CR>", opts)
+vim.keymap.set("n", "<C-q>", ":cclose<CR>", opts)
+
 -- Tabs
 vim.keymap.set("n", "<leader>tn", ":tabnew<CR>", opts)
 vim.keymap.set("n", "<leader>to", ":tabonly<CR>", opts)
