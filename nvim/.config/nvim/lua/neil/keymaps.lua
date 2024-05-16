@@ -37,6 +37,3 @@ vim.keymap.set("x", "<leader>P", [["_d"+P]], opts)
 
 -- tmux-sessionizer
 vim.keymap.set("n", "<C-f>", ":silent !tmux neww tmux-sessionizer<CR>", opts)
-
--- Project view
-vim.keymap.set("n", "<leader>pv", ":silent Ex<CR>", opts)
