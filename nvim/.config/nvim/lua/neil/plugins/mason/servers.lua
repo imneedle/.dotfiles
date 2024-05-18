@@ -10,6 +10,7 @@ return {
     "hls",
     "html",
     "jdtls",
+    "jinja_lsp",
     "jsonls",
     "lua_ls",
     "pylsp",
