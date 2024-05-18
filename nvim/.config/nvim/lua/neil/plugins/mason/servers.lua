@@ -6,6 +6,7 @@ return {
     "cssls",
     "dockerls",
     "emmet_ls",
+    "esbonio",
     "eslint",
     "hls",
     "html",
