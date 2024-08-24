@@ -1,17 +1,28 @@
 {
   "schemes" : [
     {
-      "if" : {
-        "device" : {
-          "vendorID" : "0x413c",
-          "productID" : "0x301a",
-          "category" : "mouse",
-          "productName" : "Dell MS116 USB Optical Mouse"
-        }
-      },
       "scrolling" : {
+        "modifiers" : {
+          "vertical" : {
+            "command" : {
+              "scale" : 10,
+              "type" : "changeSpeed"
+            },
+            "option" : {
+              "type" : "alterOrientation"
+            }
+          }
+        },
         "reverse" : {
           "vertical" : true
+        }
+      },
+      "if" : {
+        "device" : {
+          "category" : "mouse",
+          "productName" : "Dell MS116 USB Optical Mouse",
+          "productID" : "0x301a",
+          "vendorID" : "0x413c"
         }
       }
     }
